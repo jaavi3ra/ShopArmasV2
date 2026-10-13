@@ -22,7 +22,28 @@ body,
 }
 
 body {
+  font-family: "Anton", sans-serif;
   min-height: 100vh;
+    background:
+        radial-gradient(
+            circle at 80% 10%,
+            rgba(255, 60, 172, 0.15),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(255, 122, 24, 0.12),
+            transparent 30%
+        ),
+        linear-gradient(
+            180deg,
+            #121018 0%,
+            #0d0c12 45%,
+            #08080c 100%
+        );
+
+    background-attachment: fixed;
+      box-sizing: border-box;
 }
 
 .app {
@@ -30,7 +51,8 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: #08080d;
+  
+  
 }
 
 .main-content {
