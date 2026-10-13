@@ -1,0 +1,19 @@
+.filter-link {
+  padding: 0;
+  border: none;
+  background: none;
+
+  color: #a8a8b0;
+  font-size: 16px;
+
+  cursor: pointer;
+}
+
+.filter-link:hover {
+  color: white;
+}
+
+.filter-link--active {
+  color: #ff6a00;
+  font-weight: bold;
+}

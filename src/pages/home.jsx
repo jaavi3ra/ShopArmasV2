@@ -1,5 +1,5 @@
 
-
+import { HomeTemplate } from "../components/template/HomeTemplate";
 import "../styles/pages/homePage.css";
 
 export  function Home() {
@@ -10,7 +10,7 @@ export  function Home() {
       <main className="home-content">
         <h1>Productos disponibles</h1>
 
-        {/* Acá irán tus organismos o secciones */}
+        <HomeTemplate />
       </main>
 
   
