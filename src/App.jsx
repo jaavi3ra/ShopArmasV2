@@ -29,7 +29,7 @@ function App() {
         <Route path="/product" element={<Product />} />
       </Routes>
       <main>
-        <Home/>
+        
 
       </main>
       <Footer />

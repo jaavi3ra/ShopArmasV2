@@ -16,12 +16,12 @@ export function ProductTemplate() {
 
     return (
         <div className="product-page-template">
-            <Header />
-            <main>
+         
+         
                 {/* ¡Ojo aquí! Debes pasarle la prop productData */}
                 <Product productData={productoEjemplo} />
-            </main>
-            <Footer />
+       
+          
         </div>
     );
 };
