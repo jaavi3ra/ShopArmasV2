@@ -6,8 +6,13 @@ import viteLogo from './assets/vite.svg'
 import './App.css'
 import { Header } from './components/organism/header'
 import { Footer } from './components/organism/footer'
-import { Home } from './pages/home'
+
 import './styles/global.css'
+import { Routes, Route } from 'react-router-dom';
+import { Home }   from './pages/home';
+import { Login }  from './pages/login';
+import { Stash }  from './pages/stash';
+import { Product }from './pages/product';
 
 
 function App() {
@@ -17,6 +22,12 @@ function App() {
    <>
     <div>
       <Header />
+        <Routes>
+        <Route path="/home" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/stash" element={<Stash />} />
+        <Route path="/product" element={<Product />} />
+      </Routes>
       <main>
         <Home/>
 

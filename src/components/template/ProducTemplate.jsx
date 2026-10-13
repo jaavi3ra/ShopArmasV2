@@ -3,7 +3,7 @@ import { Product } from '../organism/Product';
 import { Footer } from '../organism/footer';
 import imagenPistola from '../../assets/Pistol-GTASA.webp';
 
-export const ProducTemplate = () => {
+export function ProductTemplate() {
     const productoEjemplo = {
         name: "Espada de Prueba",
         precio: "$1,500",

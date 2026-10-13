@@ -1,12 +1,10 @@
 import "../../styles/atomic/Nav-Link.css";
+import { Link } from "react-router-dom";
 
-export  function NavLink({ text, href = "#", active = false }) {
+export  function NavLink({ text, to }) {
   return (
-    <a
-      href={href}
-      className={`nav-link ${active ? "nav-link--active" : ""}`}
-    >
+    <Link to={to} className="nav-link">
       {text}
-    </a>
+    </Link>
   );
 }
