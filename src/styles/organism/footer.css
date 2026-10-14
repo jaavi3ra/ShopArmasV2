@@ -1,0 +1,7 @@
+footer{
+    padding: 20px;
+    border-top: 1px solid var(--border);
+    color: #85818e;
+    text-align: center;
+    font-size: .74rem;
+}

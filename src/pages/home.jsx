@@ -4,16 +4,14 @@ import "../styles/pages/homePage.css";
 
 export  function Home() {
   return (
-    <div className="home-page">
-  
+    <div>
+      <HomeTemplate stock={4}>
 
-      <main className="home-content">
-        <h1>Productos disponibles</h1>
+      <div>Card 1</div>
+      <div>Card 2</div>
+      <div>Card 3</div>
 
-        <HomeTemplate />
-      </main>
-
-  
+    </HomeTemplate>
     </div>
   );
 }

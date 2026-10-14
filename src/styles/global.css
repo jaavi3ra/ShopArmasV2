@@ -17,14 +17,18 @@
 html,
 body,
 #root {
- 
-  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+   overflow-x: hidden;
+  
 }
 
 body {
   font-family: "Anton", sans-serif;
   min-height: 100vh;
-    background:
+  background:
         radial-gradient(
             circle at 80% 10%,
             rgba(255, 60, 172, 0.15),
@@ -43,11 +47,10 @@ body {
         );
 
     background-attachment: fixed;
-      box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .app {
-  width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -57,4 +60,9 @@ body {
 
 .main-content {
   flex: 1;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
 }

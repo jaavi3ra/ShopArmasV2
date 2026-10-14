@@ -28,7 +28,7 @@ function App() {
         <Route path="/stash" element={<Stash />} />
         <Route path="/product" element={<Product />} />
       </Routes>
-      <main>
+      <main className="main-content">
         
 
       </main>

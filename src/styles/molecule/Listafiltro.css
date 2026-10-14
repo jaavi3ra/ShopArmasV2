@@ -1,10 +1,7 @@
-.shop-section .filtros {
-  position: sticky;
-  top: 100px;
+ .filtros {
+  position: absolute;
   align-self: flex-start;
-  padding: 16px;
   border: 1px solid var(--border);
-  background: rgba(21, 21, 28, 0.9);
   backdrop-filter: blur(8px);
   z-index: 10;
 }
@@ -16,7 +13,7 @@ ul {
   background: rgba(21, 21, 28, .74);
 }
 
-li a {
+li  {
   display: block;
   color: inherit;
   padding: 8px 16px;

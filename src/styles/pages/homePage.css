@@ -1,14 +1,50 @@
-.home-page {
-  min-height: 100vh;
 
-  display: flex;
-  flex-direction: column;
-
-}
 
 .home-content {
-  flex: 1;
-  width: 100%;
-  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  margin: 25px;
+  gap: 12px;
 }
 
+.filter-section {
+  width: 220px;
+  flex-shrink: 0;
+}
+.card-section{
+  flex: 1;
+}
+
+.stock-note {
+  color: var(--muted);
+  font-size: .78rem;
+}
+.home-template {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 32px;
+  padding: 24px 32px;
+  box-sizing: border-box;
+
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.catalog-header {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 20px;
+  gap:75%
+}
+
+.catalog-header h2 {
+  margin: 5px 0 0;
+}
+
+.catalog-section {
+  min-width: 0;
+  width: 100%;
+}
