@@ -5,7 +5,6 @@ import '../../styles/organism/footer.css';
 export function Footer() {
   return (
     <footer>
-      <Divider />
       <FooterInfo />
     </footer>
   );

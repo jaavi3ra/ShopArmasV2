@@ -1,0 +1,11 @@
+.product-image img {
+  width: 92%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 1.2s ease;
+  filter: drop-shadow(0 12px 12px rgba(0, 0, 0, .45));
+}
+
+.product-card:hover .product-image img {
+  transform: rotateY(360deg) scale(1.08);
+}

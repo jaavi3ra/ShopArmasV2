@@ -63,6 +63,7 @@ body {
   width: 100%;
 }
 
+/* todos los elementos calculan el ancho y alto */
 * {
   box-sizing: border-box;
 }
