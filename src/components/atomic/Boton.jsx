@@ -1,4 +1,5 @@
 import '../../styles/atomic/filtroLink.css';
+import '../../styles/atomic/Boton.css'
 
 export function Boton({ children, onClick, className }) {
   return (
@@ -19,3 +20,14 @@ export function FiltroLink({ text, value, active=false, onClick }) {
       {text}
     </button>);
   }
+
+export function TabButton({  children, active = false, onClick }) {
+  return (
+    <button
+      className={`auth-tab ${active ? "active" : ""}`}
+      onClick={onClick}
+    >
+      {children}
+    </button>
+  );
+}

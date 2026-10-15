@@ -1,0 +1,19 @@
+.form-header {
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+
+.form-header h1 {
+    margin:
+        7px 0 5px;
+    font-size: 2rem;
+}
+
+
+.form-header p {
+    margin: 0;
+    color: #94919d;
+    font-family: sans-serif;
+    font-size: 14px;
+}
