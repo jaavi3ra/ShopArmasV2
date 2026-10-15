@@ -1,0 +1,12 @@
+/* src/styles/atomic/Boton.css */
+.boton-base {
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.boton-base:hover {
+    opacity: 0.9;
+}
