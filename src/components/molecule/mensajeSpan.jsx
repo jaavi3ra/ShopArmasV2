@@ -1,5 +1,5 @@
 import { Texto } from "../atomic/Texto";
-import "../../styles/molecule/MensajeSpan.css";
+import "../../styles/molecule/mensajeSpan.css";
 
 export function MensajeSpan({ texto, className }) {
   return (

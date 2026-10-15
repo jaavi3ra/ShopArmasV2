@@ -8,8 +8,13 @@ export  function Home() {
   const [nombreProducto, setNombreProducto] = useState("");
 
   function agregarProducto(nombre) {
-        console.log("Producto agregado:", nombre);
+    console.log("Producto agregado:", nombre);
     setNombreProducto(nombre);
+
+    setTimeout(() => {
+      setNombreProducto("");
+    }, 3000);
+  
   }
   return (
     <div>
