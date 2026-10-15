@@ -1,10 +1,24 @@
 import { Listafiltro } from "../molecule/Listafiltro";
 import { EyebrowText } from "../atomic/Etiqueta";
+import { MensajeSpan } from "../molecule/mensajeSpan";
 
-export function HomeTemplate({ children, stock = 0 }) {
+
+
+export function HomeTemplate({ children, stock = 0 ,nombreProducto}) {
+  console.log("TEMPLATE RECIBE:", nombreProducto);
   return (
+    <>  
+   {nombreProducto && (
+        <div className="span-container">
+          <MensajeSpan
+            texto={nombreProducto}
+            className="mensaje-alerta" />
+        </div>
+      )}
+
     <div className="home-template">
 
+      
       <aside className="filter-section">
         <EyebrowText>FILTROS</EyebrowText>
         <Listafiltro />
@@ -30,5 +44,6 @@ export function HomeTemplate({ children, stock = 0 }) {
       </main>
 
     </div>
+    </>
   );
 }
