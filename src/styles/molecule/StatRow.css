@@ -1,0 +1,38 @@
+.stat {
+  display: grid;
+  grid-template-columns: 72px 1fr 28px;
+  gap: 9px;
+  align-items: center;
+}
+
+.stat b {
+  color: #c7c4ce;
+  font-size: .62rem;
+  text-align: right;
+}
+
+.stat span {
+  font-size: 0.7rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.stat-bar {
+  height: 7px;
+  background: #2a2730;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.stat-value {
+  height: 100%;
+  border-radius: inherit;
+
+  background: linear-gradient(90deg,
+      var(--orange),
+      var(--pink),
+      var(--purple));
+
+  box-shadow: 0 0 10px rgba(255, 60, 172, 0.4);
+}
