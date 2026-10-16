@@ -1,7 +1,4 @@
 import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
 
 import './App.css'
 import { Header } from './components/organism/header'
@@ -16,20 +13,21 @@ import { Product }from './pages/product';
 
 
 function App() {
-  const [count, setCount] = useState(0)
 
+   const [stashQuantity, setStashQuantity] = useState(0);
   return (
    <>
     <div>
-      <Header />
+      <Header stashQuantity={stashQuantity}/>
+      <main className="main-content">
         <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Home  setStashQuantity={setStashQuantity}/>} />
+        <Route path="/home" element={<Home setStashQuantity={setStashQuantity}/>} />
         <Route path="/login" element={<Login />} />
         <Route path="/stash" element={<Stash />} />
         <Route path="/product" element={<Product />} />
       </Routes>
-      <main className="main-content">
+      
         
 
       </main>

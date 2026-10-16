@@ -4,16 +4,20 @@ import { ProductCard } from "../components/organism/CardProducto";
 import { HomeTemplate } from "../components/template/HomeTemplate";
 import "../styles/pages/homePage.css";
 
-export  function Home() {
+export  function Home({ stashQuantity,  setStashQuantity
+}) {
   const [nombreProducto, setNombreProducto] = useState("");
 
   function agregarProducto(nombre) {
     console.log("Producto agregado:", nombre);
     setNombreProducto(nombre);
-
+    setStashQuantity((cantidadActual) => cantidadActual + 1)
+    
     setTimeout(() => {
       setNombreProducto("");
     }, 3000);
+
+    
   
   }
   return (

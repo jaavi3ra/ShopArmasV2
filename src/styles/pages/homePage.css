@@ -26,6 +26,7 @@
   gap: 32px;
   padding: 24px 32px;
   box-sizing: border-box;
+  padding-top: 5%;
 
 }
 .product-grid {
@@ -52,7 +53,7 @@
 
 /* Adaptacion final del catalogo */
 @media (max-width: 1200px) {
-  div#home-content {
+  div#home-content   .home-template {
     width: min(100% - 48px, 1180px);
   }
 
@@ -62,12 +63,13 @@
 }
 
 @media (max-width: 760px) {
-  div#home-content {
+  div#home-content   .home-template {
     width: min(100% - 24px, 1180px);
     margin-top: 22px;
   }
+  
 
-  div#home-content .contenedor {
+  div#home-content .contenedor   .home-template {
     grid-template-columns: 1fr;
     gap: 20px;
   }
