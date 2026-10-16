@@ -1,0 +1,41 @@
+
+div.span-container {
+  position: fixed;
+  top: 95px;
+  right: 25px;
+  z-index: 9999;
+  padding: 14px 20px;
+  background:
+    linear-gradient(#15151c, #15151c) padding-box,
+    linear-gradient(
+      135deg,
+      #ff7a18,
+      #ff3cac,
+      #8a2be2
+    ) border-box;
+
+  border: 2px solid transparent;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  animation: aparecerMensaje 0.3s ease;
+  max-width: 320px;
+}
+
+.mensaje-alerta {
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+@keyframes aparecerMensaje {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

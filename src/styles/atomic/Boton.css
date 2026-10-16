@@ -1,12 +1,46 @@
-/* src/styles/atomic/Boton.css */
-.boton-base {
-    padding: 10px 20px;
-    border-radius: 6px;
+.auth-submit {
+
+    margin-top: 5px;
+
+    padding: 13px;
+
     border: none;
+
+    border-radius: 6px;
+
+    color: white;
+
+    background:
+        linear-gradient(135deg,
+            #ff7a18,
+            #ff3cac);
+
+    font-family: "Anton", sans-serif;
+
+    font-size: 16px;
+
+    letter-spacing: 1px;
+
     cursor: pointer;
-    font-weight: 600;
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
 }
 
-.boton-base:hover {
-    opacity: 0.9;
+
+.auth-submit:hover {
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 10px 25px rgba(255, 60, 172, 0.25);
+}
+
+
+.auth-submit:active {
+
+    transform:
+        translateY(1px);
 }

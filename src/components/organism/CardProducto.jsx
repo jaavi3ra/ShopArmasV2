@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { Imagen } from "../atomic/Imagen";
 import { StatRow } from "../molecule/StatRow";
 
-export function ProductCard({ product }) {
+export function ProductCard({ product , onAgregarProducto}) {
   return (
     <article
       className="product-card"
@@ -79,7 +79,9 @@ export function ProductCard({ product }) {
           </div>
 
           <button
-            className="btn-agregar-item"
+            className="btn-agregar-item" onClick={() => {
+                console.log("CLICK:", product.name);
+              onAgregarProducto(product.name)}}
             data-id={product.id}
           >
             AGREGAR

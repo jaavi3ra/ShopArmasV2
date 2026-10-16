@@ -1,33 +1,16 @@
-import '../../styles/atomic/Boton.css';
 import '../../styles/atomic/filtroLink.css';
+import '../../styles/atomic/Boton.css'
 
-export function Boton({
-  children,
-  text,
-  onClick,
-  variant,
-  className = '',
-  type = 'button',
-  ...props
-}) {
-  const variantClass = variant ? `boton-${variant}` : '';
-  const combinedClassName = `boton-base ${variantClass} ${className}`.trim();
-
+export function Boton({ children, onClick, className }) {
   return (
-    <button
-      type={type}
-      onClick={onClick}
-      className={combinedClassName}
-      {...props}
-    >
-      {text || children}
+    <button onClick={onClick} className={className}>
+      {children}
     </button>
   );
 }
 
-export const Button = Boton;
-
 export function FiltroLink({ text, value, active = false, onClick }) {
+
   return (
     <button
       type="button"
@@ -35,6 +18,16 @@ export function FiltroLink({ text, value, active = false, onClick }) {
       onClick={() => onClick(value)}
     >
       {text}
+    </button>);
+}
+
+export function TabButton({ children, active = false, onClick }) {
+  return (
+    <button
+      className={`auth-tab ${active ? "active" : ""}`}
+      onClick={onClick}
+    >
+      {children}
     </button>
   );
-}
+}

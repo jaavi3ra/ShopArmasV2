@@ -1,0 +1,42 @@
+.auth-page {
+
+    min-height: calc(100vh - 100px);
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 50px 20px;
+}
+
+
+.auth-container {
+
+    width: 100%;
+    max-width: 470px;
+
+    padding: 32px;
+
+    border: 2px solid transparent;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            rgba(21, 21, 28, 0.97),
+            rgba(21, 21, 28, 0.97)
+        ) padding-box,
+
+        linear-gradient(
+            135deg,
+            #ff7a18,
+            #ff3cac,
+            #8a2be2
+        ) border-box;
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.55);
+}
+
+

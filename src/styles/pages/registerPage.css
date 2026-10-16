@@ -1,0 +1,12 @@
+/* FORM */
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+
+.auth-form.hidden {
+    display: none;
+}

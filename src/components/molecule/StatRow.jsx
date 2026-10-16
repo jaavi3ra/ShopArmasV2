@@ -1,20 +1,22 @@
+import '../../styles/molecule/StatRow.css';
+
 export function StatRow({ label, value }) {
   return (
-    <div className="stat-row">
+    <div className="stat">
       <span className="stat-label">
         {label}
       </span>
 
       <div className="stat-bar">
         <div
-          className="stat-fill"
+          className="stat-value"
           style={{ width: `${value}%` }}
         />
       </div>
 
-      <span className="stat-value">
-        {value}
-      </span>
+      <div>
+         <b>{value}</b>
+      </div>
     </div>
   );
 }

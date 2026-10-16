@@ -5,10 +5,10 @@ export const productosCatalogo = [
         category: "Pistola",
         price: 12500,
         rp: 150,
-        image: "src/assets/img/static_wikia_nocookie_net-latest.webp",
+        image: "/-img/static_wikia_nocookie_net-latest.webp",
         images: [
-            "src/assets/img/static_wikia_nocookie_net-latest.webp",
-            "src/assets/img/pistola2.jpg"
+            "/-img/static_wikia_nocookie_net-latest.webp",
+            "/-img/pistola2.jpg"
         ],
         description: "Pistolita pium pium, perfecta para cuando quieres verte peligroso sin gastar todo el botin.\nEn Los Santos sirve para negociar descuentos, saludar rivales y salir corriendo con estilo.",
         stats: { damage: 85, accuracy: 70, range: 65 },
@@ -20,8 +20,8 @@ export const productosCatalogo = [
         category: "Subfusil",
         price: 8900,
         rp: 90,
-        image: "./assets/img/MicroSMG-GTAVC.webp",
-        images: ["./assets/img/MicroSMG-GTAVC.webp"],
+        image: "/-img/MicroSMG-GTAVC.webp",
+        images: ["/-img/MicroSMG-GTAVC.webp"],
         description: "Subfusil compacto pensado para una jugabilidad rapida. Ligero, veloz y con buen control a corta distancia.",
         stats: { damage: 50, accuracy: 62, range: 45 },
         badge: "POPULAR"
@@ -32,8 +32,8 @@ export const productosCatalogo = [
         category: "Rifle",
         price: 18600,
         rp: 210,
-        image: "./assets/img/gtwfilesie_grandtheftwiki_com-SniperRifle-GTAIV.webp",
-        images: ["./assets/img/gtwfilesie_grandtheftwiki_com-SniperRifle-GTAIV.webp"],
+        image: "/-img/gtwfilesie_grandtheftwiki_com-SniperRifle-GTAIV.webp",
+        images: ["/-img/gtwfilesie_grandtheftwiki_com-SniperRifle-GTAIV.webp"],
         description: "Rifle virtual de potencia alta y alcance largo. Una opcion equilibrada dentro del catalogo del simulador.",
         stats: { damage: 98, accuracy: 78, range: 82 },
         badge: "DROP"
@@ -44,8 +44,8 @@ export const productosCatalogo = [
         category: "Escopeta",
         price: 16200,
         rp: 185,
-        image: "./assets/img/gtwfilesie_grandtheftwiki_com-StubbyShotgun-GTAVC.webp",
-        images: ["./assets/img/gtwfilesie_grandtheftwiki_com-StubbyShotgun-GTAVC.webp"],
+        image: "/-img/gtwfilesie_grandtheftwiki_com-StubbyShotgun-GTAVC.webp",
+        images: ["/-img/gtwfilesie_grandtheftwiki_com-StubbyShotgun-GTAVC.webp"],
         description: "Utiliza perdigones de tortas de cumpleanos, pero no trae velitas ni perdon.\nIdeal para entrar a una tienda, preguntar el precio y que todos entiendan que vas apurado.",
         stats: { damage: 92, accuracy: 55, range: 38 },
         badge: "HOT"
