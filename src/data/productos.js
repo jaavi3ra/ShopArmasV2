@@ -1,5 +1,5 @@
 export const productosCatalogo = [
-      {
+    {
         id: "desert-eagle",
         name: "Desert Eagle",
         category: "Pistola",
@@ -34,7 +34,7 @@ export const productosCatalogo = [
         rp: 210,
         image: "/-img/gtwfilesie_grandtheftwiki_com-SniperRifle-GTAIV.webp",
         images: ["/-img/gtwfilesie_grandtheftwiki_com-SniperRifle-GTAIV.webp"],
-        description: "Rifle virtual de potencia alta y alcance largo. Una opcion equilibrada dentro del catalogo del simulador.",
+        description: "Rifle virtual de potencia alta y alcance largo. Una opcion equilibrada para auyentar pasteros cerca de la cuadra del Duoc.",
         stats: { damage: 98, accuracy: 78, range: 82 },
         badge: "DROP"
     },
@@ -51,4 +51,3 @@ export const productosCatalogo = [
         badge: "HOT"
     }
 ];
-  

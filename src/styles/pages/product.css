@@ -162,8 +162,10 @@
 /* Estilo base compartido o aplicado a ambos botones por igual */
 .acciones-producto .btn-carrito-custom,
 .acciones-producto .btn-comprar-custom {
-    flex: 1; /* Hace que ambos ocupen exactamente el mismo ancho */
-    background-color: #2e7d32; /* Mismo color verde base */
+    flex: 1;
+    /* Hace que ambos ocupen exactamente el mismo ancho */
+    background-color: #2e7d32;
+    /* Mismo color verde base */
     color: white;
     border: none;
     border-radius: 5px;
@@ -177,7 +179,8 @@
 /* Efecto Hover unificado para ambos */
 .acciones-producto .btn-carrito-custom:hover,
 .acciones-producto .btn-comprar-custom:hover {
-    background-color: #388e3c; /* Mismo tono de verde al pasar el mouse */
+    background-color: #388e3c;
+    /* Mismo tono de verde al pasar el mouse */
 }
 
 /* Efecto Active (al hacer clic) unificado */
@@ -229,5 +232,42 @@
 
     .stat {
         grid-template-columns: 76px minmax(0, 1fr);
+    }
+}
+
+/* Sección de productos relacionados */
+.productos-relacionados-seccion {
+    margin-top: 55px;
+    padding-top: 35px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.productos-relacionados-titulo {
+    font-family: 'Anton', Impact, sans-serif;
+    font-size: 1.85rem;
+    font-weight: 400;
+    color: #ffffff;
+    margin: 0 0 25px 0;
+    letter-spacing: 0.5px;
+    text-align: left;
+}
+
+.productos-relacionados-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+@media (max-width: 860px) {
+    .productos-relacionados-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+}
+
+@media (max-width: 540px) {
+    .productos-relacionados-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
     }
 }

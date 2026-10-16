@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Boton } from '../atomic/Boton';
 import { EyebrowText } from '../atomic/Etiqueta';
+import { ProductRelacionado } from '../molecule/ProductRelacionado';
+import { productosCatalogo } from '../../data/productos';
 import '../../styles/pages/product.css';
 
 export function ProductTemplate({ producto, onAddToStash }) {
@@ -37,6 +39,11 @@ export function ProductTemplate({ producto, onAddToStash }) {
     : (image ? [image] : []);
 
   const imagenActiva = selectedImage || image || galeriaImagenes[0] || '';
+
+  // Obtener productos relacionados excluyendo el actual
+  const productosRelacionados = productosCatalogo
+    .filter((item) => item.id !== producto.id)
+    .slice(0, 3);
 
   const handleStash = () => {
     if (onAddToStash) {
@@ -161,6 +168,19 @@ export function ProductTemplate({ producto, onAddToStash }) {
           </div>
         </div>
       </div>
+
+      {/* 3. Sección de Productos Relacionados */}
+      <section className="productos-relacionados-seccion">
+        <h2 className="productos-relacionados-titulo">Productos relacionados</h2>
+        <div className="productos-relacionados-grid">
+          {productosRelacionados.map((item) => (
+            <ProductRelacionado
+              key={item.id}
+              product={item}
+            />
+          ))}
+        </div>
+      </section>
     </div>
   );
 }
