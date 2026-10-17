@@ -2,8 +2,9 @@
 import "../../styles/organism/ProductCard.css";
 import { Imagen } from "../atomic/Imagen";
 import { StatRow } from "../molecule/StatRow";
+import { Link } from "react-router-dom";
 
-export function ProductCard({ product , onAgregarProducto}) {
+export function ProductCard({ product, onAgregarProducto }) {
   return (
     <article
       className="product-card"
@@ -22,33 +23,31 @@ export function ProductCard({ product , onAgregarProducto}) {
         ♡
       </button>
 
-      <a
+      <Link
         className="product-image"
-        href={`?page=product&id=${product.id}`}
-        data-product-id={product.id}
+        to={`/product/${product.id}`}
         aria-label={`Ver ${product.name}`}
       >
         <Imagen
           src={product.image}
           alt={product.name}
         />
-      </a>
+      </Link>
 
       <div className="product-content">
         <span className="product-category">
           {product.category}
         </span>
 
-        <a
+        <Link
           className="product-title-link"
-          href={`?page=product&id=${product.id}`}
-          data-product-id={product.id}
+          to={`/product/${product.id}`}
           aria-label={`Ver ${product.name}`}
         >
           <h3 className="name-product">
             {product.name}
           </h3>
-        </a>
+        </Link>
 
         <div className="weapon-stats compact">
           <StatRow

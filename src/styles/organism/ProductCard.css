@@ -22,6 +22,7 @@
     linear-gradient(#15151c, #15151c) padding-box,
     linear-gradient(135deg, var(--orange), var(--pink), var(--purple)) border-box;
 }
+
 .weapon-stats {
   display: flex;
   flex-direction: column;
@@ -50,6 +51,7 @@
 .product-title-link:hover .name-product {
   color: var(--orange);
 }
+
 .product-category {
   display: block;
   color: var(--orange);
@@ -81,7 +83,8 @@
   padding-top: 16px;
   border-top: 1px solid var(--border);
 }
-.product-badge{
+
+.product-badge {
   margin: 5px;
   position: absolute;
 }

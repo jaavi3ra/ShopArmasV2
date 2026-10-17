@@ -4,7 +4,7 @@ import { Input } from "../atomic/Input";
 import { Icono } from "../atomic/Icono";
 import "../../styles/molecule/PasswordInput.css";
 
-export function PasswordInput({ label, id, placeholder, value, onChange
+export function PasswordInput({ label, id, placeholder, value, onChange,error
 }) {
   const [visible, setVisible] = useState(false);
 
@@ -25,13 +25,16 @@ export function PasswordInput({ label, id, placeholder, value, onChange
 
         <button
           type="button" className="show-password"
-          onClick={() => setVisible(!visible)}
-        >
-          <Icono>
-            👁
-          </Icono>
+          onClick={() => setVisible(!visible)}>
+          <Icono> 👁 </Icono>
         </button>
+        
       </div>
+         {error && (
+        <span className="input-error">
+          {error}
+        </span>)}
+      
     </div>
   );
 }
