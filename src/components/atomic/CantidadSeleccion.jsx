@@ -1,4 +1,4 @@
-
+import '../../styles/atomic/CantidadSeleccion.css';
 export const CantidadSeleccion = ({ id, value, onChange }) => {
     return (
         <div className="cantidad-seleccion">

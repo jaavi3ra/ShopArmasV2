@@ -9,9 +9,9 @@ export function Boton({ children, onClick, className }) {
   );
 }
 
-export function FiltroLink({ text, value, active = false, onClick }) {
+export function FiltroLink({ text, value, active=false, onClick }) {
 
-  return (
+ return (
     <button
       type="button"
       className={`filter-link ${active ? "filter-link--active" : ""}`}
@@ -19,9 +19,9 @@ export function FiltroLink({ text, value, active = false, onClick }) {
     >
       {text}
     </button>);
-}
+  }
 
-export function TabButton({ children, active = false, onClick }) {
+export function TabButton({  children, active = false, onClick }) {
   return (
     <button
       className={`auth-tab ${active ? "active" : ""}`}

@@ -1,3 +1,7 @@
+.product-page {
+    padding-top: 90px;
+}
+
 .detalle-producto {
     width: 90%;
     max-width: 1100px;
@@ -90,12 +94,31 @@
     padding-bottom: 20px;
 }
 
+.producto-categoria {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+}
+
+.producto-badge {
+    background-color: var(--orange, #ff7a18);
+    color: #ffffff;
+    font-size: 0.65rem;
+    font-weight: 800;
+    padding: 2px 6px;
+    border-radius: 3px;
+    letter-spacing: 1px;
+}
+
 .producto-precio {
     text-align: right;
 }
 
 .producto-precio h2 {
     margin: 0;
+    font-family: 'Anton', Impact, sans-serif;
+    letter-spacing: 0.5px;
 }
 
 #rpProducto {

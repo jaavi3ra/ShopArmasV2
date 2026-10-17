@@ -1,8 +1,8 @@
 
 import "../../styles/organism/ProductCard.css";
-import { Link } from "react-router-dom";
 import { Imagen } from "../atomic/Imagen";
 import { StatRow } from "../molecule/StatRow";
+import { Link } from "react-router-dom";
 
 export function ProductCard({ product, onAgregarProducto }) {
   return (
@@ -49,7 +49,6 @@ export function ProductCard({ product, onAgregarProducto }) {
           </h3>
         </Link>
 
-
         <div className="weapon-stats compact">
           <StatRow
             label="Daño"
@@ -87,8 +86,6 @@ export function ProductCard({ product, onAgregarProducto }) {
           >
             AGREGAR
           </button>
-
-
         </div>
       </div>
     </article>

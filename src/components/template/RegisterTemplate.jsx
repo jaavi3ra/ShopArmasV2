@@ -18,6 +18,9 @@ export function RegisterTemplate({
   onSubmit,
   onTabChange,
   message = "",
+  emailError = "",
+  passwordError = "",
+  confirmPasswordError = ""
 }) {
   return (
     <div className="auth-page">
@@ -47,6 +50,7 @@ export function RegisterTemplate({
             value={name}
             onChange={onNameChange}
             autoComplete="name"
+            
           />
 
           <FormInput
@@ -57,6 +61,7 @@ export function RegisterTemplate({
             value={email}
             onChange={onEmailChange}
             autoComplete="email"
+            error={emailError}
           />
 
           <PasswordInput
@@ -66,6 +71,7 @@ export function RegisterTemplate({
             value={password}
             onChange={onPasswordChange}
             autoComplete="new-password"
+            error={passwordError}
           />
 
           <PasswordInput
@@ -75,6 +81,7 @@ export function RegisterTemplate({
             value={confirmPassword}
             onChange={onConfirmPasswordChange}
             autoComplete="new-password"
+            error={confirmPasswordError}
           />
 
           <Boton

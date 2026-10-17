@@ -14,6 +14,8 @@ export function LoginTemplate({
   onSubmit,
   onTabChange,
   message = "",
+  emailError = "",
+  passwordError = "",
 }) {
   return (
     <div className="auth-page">
@@ -43,6 +45,7 @@ export function LoginTemplate({
             value={email}
             onChange={onEmailChange}
             autoComplete="email"
+            error={emailError}
           />
 
           <PasswordInput
@@ -52,6 +55,7 @@ export function LoginTemplate({
             value={password}
             onChange={onPasswordChange}
             autoComplete="current-password"
+            error={passwordError}
           />
 
           <Boton type="submit" className="auth-submit" >
