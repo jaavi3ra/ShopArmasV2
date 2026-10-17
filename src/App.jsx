@@ -62,9 +62,9 @@ function App() {
           <Route path="/cart" element={
               <Cart carrito={carrito} setCarrito={setCarrito}/>
             }/>
-          <Route
-            path="/checkout" element={<Checkout carrito={carrito} />}
-          />
+          <Route path="/checkout" element={
+              <Checkout carrito={carrito} setCarrito={setCarrito}/>
+            }/>
           <Route path="/product" element={<Product />} />
         </Routes>
         <main className="main-content"></main>
