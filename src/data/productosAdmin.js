@@ -1,5 +1,5 @@
 
-import { productosCatalogo } from "./productos";
+import { productosCatalogo } from "./productos.js";
 
 export function obtenerTodosLosProductos() {
   const productosGuardados = JSON.parse(
