@@ -1,3 +1,5 @@
+import React from "react";
+
 export function Input({
   type = "text",
   placeholder,
