@@ -1,3 +1,4 @@
+import React from "react";
 import { Texto } from "../atomic/Texto";
 import { Input } from "../atomic/Input";
 import "../../styles/molecule/FormInput.css";

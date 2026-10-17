@@ -1,3 +1,4 @@
+import React from "react";
 import '../../styles/atomic/filtroLink.css';
 import '../../styles/atomic/Boton.css'
 

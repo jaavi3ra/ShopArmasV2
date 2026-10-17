@@ -1,4 +1,4 @@
-
+import React from "react";
 import "../../styles/organism/ProductCard.css";
 import { Imagen } from "../atomic/Imagen";
 import { StatRow } from "../molecule/StatRow";

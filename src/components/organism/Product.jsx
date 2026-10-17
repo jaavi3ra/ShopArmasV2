@@ -1,3 +1,4 @@
+import React from "react";
 import { CantidadSeleccion } from "../atomic/CantidadSeleccion";
 import { Imagen } from "../atomic/Imagen";
 import { Boton } from "../atomic/Boton";

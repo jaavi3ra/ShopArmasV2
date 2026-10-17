@@ -1,3 +1,4 @@
+import React from "react";
 import { TabButton } from "../atomic/Boton";
 import "../../styles/molecule/AuthTabs.css";
 

@@ -1,5 +1,5 @@
 
-import { useState } from "react";
+import React,{ useState } from "react";
 import { obtenerTodosLosProductos } from "../data/productosAdmin";
 import { ProductCard } from "../components/organism/CardProducto";
 import { HomeTemplate } from "../components/template/HomeTemplate";
