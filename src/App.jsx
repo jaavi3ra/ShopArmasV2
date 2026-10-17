@@ -13,7 +13,8 @@ import { Home }   from './pages/home';
 import { Login }  from './pages/login';
 import { Stash }  from './pages/stash';
 import { Product }from './pages/product';
-
+import { Cart } from './pages/cart';
+import { Checkout } from './pages/checkout';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -27,6 +28,8 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/stash" element={<Stash />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/checkout" element={<Checkout />} />
         <Route path="/product" element={<Product />} />
       </Routes>
       <main className="main-content">

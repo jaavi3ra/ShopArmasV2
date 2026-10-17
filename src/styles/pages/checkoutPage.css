@@ -1,0 +1,260 @@
+
+/* CONTENIDO PRINCIPAL DEL CHECKOUT */
+
+#checkout-content {
+  margin: 25px;
+  padding: 20px;
+  color: var(--text);
+}
+
+#checkout-content > h2 {
+  max-width: 1200px;
+  margin: 0 auto 35px;
+  /*text-align: left;*/
+}
+
+/* CONTENEDOR PRINCIPAL */
+
+#contenedor-checkout {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  width: min(100%, 1200px);
+  margin: 0 auto;
+}
+
+/* FORMULARIO DE ENTREGA */
+
+#datos-compra {
+  flex: 1;
+  min-width: 0;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+}
+
+#datos-compra h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+#datos-compra h3:not(:first-child) {
+  margin-top: 30px;
+}
+
+/* CAMPOS DEL FORMULARIO */
+
+.campo-formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-bottom: 18px;
+}
+
+.campo-formulario label {
+  font-size: 0.8rem;
+}
+
+.campo-formulario input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text);
+  box-sizing: border-box;
+  font: inherit;
+}
+
+.campo-formulario input::placeholder {
+  color: var(--muted);
+}
+
+.campo-formulario input:focus {
+  outline: 1px solid var(--orange);
+  border-color: var(--orange);
+}
+
+#datos-compra {
+  text-align: left;
+}
+
+.campo-formulario label {
+  text-align: left;
+}
+
+.opciones label {
+  justify-content: flex-start;
+  text-align: left;
+}
+
+/* OPCIONES DE ENTREGA Y PAGO */
+
+.opciones {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.opciones label {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  cursor: pointer;
+}
+
+.opciones input[type="radio"] {
+  accent-color: var(--green);
+  cursor: pointer;
+}
+
+/* RESUMEN DE COMPRA */
+
+#resumen-checkout {
+  width: 300px;
+  flex-shrink: 0;
+  margin-top: 0;
+  padding: 25px;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+}
+
+#resumen-checkout h3 {
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+/* PRODUCTOS DEL RESUMEN */
+
+.producto-checkout {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 12px 0;
+  font-size: 0.9rem;
+}
+
+.producto-checkout span:last-child {
+  flex-shrink: 0;
+  text-align: right;
+}
+
+/* LÍNEAS DEL RESUMEN */
+
+#resumen-checkout hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 20px 0;
+}
+
+.linea-checkout {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 15px 0;
+}
+
+.linea-checkout span:last-child {
+  text-align: right;
+}
+
+.total-checkout {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+/* BOTÓN CONFIRMAR COMPRA */
+
+.checkout-submit {
+  width: fit-content;
+  margin-top: 20px;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  background-color: var(--green);
+  box-shadow: 0 5px #1e3d34;
+}
+
+.checkout-submit:active {
+  box-shadow: 0 2px #1e3d34;
+  transform: translateY(3px);
+}
+
+/* NOTA DEL RESUMEN */
+
+.checkout-summary-note {
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+/* BOTÓN VOLVER AL CARRITO */
+
+.checkout-back {
+  width: min(100%, 1200px);
+  margin: 25px auto 0;
+}
+
+.checkout-back a {
+  display: block;
+  width: fit-content;
+  padding: 10px 18px;
+  border-radius: 5px;
+  background-color: var(--green);
+  color: white;
+  text-decoration: none;
+}
+
+.checkout-back a:hover {
+  filter: brightness(1.1);
+}
+
+/* TABLETS */
+
+@media (max-width: 900px) {
+  #checkout-content {
+    margin: 16px;
+    padding: 12px;
+  }
+
+  #contenedor-checkout {
+    flex-direction: column;
+  }
+
+  #datos-compra,
+  #resumen-checkout {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  #resumen-checkout {
+    margin-top: 0;
+  }
+}
+
+/* MÓVILES */
+
+@media (max-width: 560px) {
+  .producto-checkout,
+  .linea-checkout {
+    gap: 12px;
+  }
+
+  #datos-compra {
+    padding: 18px;
+  }
+
+  .checkout-back a {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+}
