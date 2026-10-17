@@ -1,11 +1,13 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import { LoginTemplate } from "../components/template/LoginTemplate";
 import { RegisterTemplate } from "../components/template/RegisterTemplate";
 
 export function Login() {
+  const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState("login");
-
+  
   //login 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -16,12 +18,19 @@ export function Login() {
   const [registerPassword, setRegisterPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
+  
   function handleLoginSubmit(event) {
     event.preventDefault();
-
-    console.log("LOGIN");
-    console.log(email, password);
+    if (
+      email === "admin@grovemarket.com" &&
+      password === "grove1234"
+    ) {
+      navigate("/admin");
+    } else {
+      alert("Correo o contraseña incorrectos.");
+    }
   }
+
 
   function handleRegisterSubmit(event) {
     event.preventDefault();

@@ -12,6 +12,7 @@ import { Home } from "./pages/home";
 import { Login } from "./pages/login";
 import { Stash } from "./pages/stash";
 import { Product } from "./pages/product";
+import { Admin } from './pages/admin';
 import { Cart } from "./pages/cart";
 import { Checkout } from "./pages/checkout";
 
@@ -66,6 +67,7 @@ function App() {
               <Checkout carrito={carrito} setCarrito={setCarrito}/>
             }/>
           <Route path="/product" element={<Product />} />
+          <Route path="/admin" element={<Admin />} />
         </Routes>
         <main className="main-content"></main>
         <Footer />
