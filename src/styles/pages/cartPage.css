@@ -7,9 +7,12 @@
   color: var(--text);
 }
 
-#carrito-content > h2 {
-  text-align: center;
-  margin-bottom: 35px;
+#carrito-content h2 {
+  font-family: inherit;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 /* CONTENEDOR PRINCIPAL */
@@ -190,13 +193,35 @@
   border-radius: 5px;
   cursor: pointer;
   color: white;
+  font-family: inherit;
   background-color: var(--green);
   box-shadow: 0 5px #1e3d34;
+}
+
+.boton-finalizar:hover {
+  background-color: var(--orange);
 }
 
 .boton-finalizar:active {
   box-shadow: 0 2px #1e3d34;
   transform: translateY(3px);
+}
+
+.boton-seguir-comprando {
+  background-color: var(--green);
+  color: var(--text);
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 18px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.boton-seguir-comprando:hover {
+  background-color: var(--orange);
 }
 
 .cart-summary-note {

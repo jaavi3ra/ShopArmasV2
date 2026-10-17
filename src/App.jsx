@@ -1,5 +1,5 @@
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import "./App.css";
 import "./styles/global.css";
@@ -16,7 +16,14 @@ import { Cart } from "./pages/cart";
 import { Checkout } from "./pages/checkout";
 
 function App() {
-  const [carrito, setCarrito] = useState([]);
+  const [carrito, setCarrito] = useState(() => {
+  const carritoGuardado = localStorage.getItem("carrito");
+
+  return carritoGuardado ? JSON.parse(carritoGuardado) : [];
+});
+  useEffect(() => {
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+  }, [carrito]);
   function agregarAlCarrito(producto) {
 
   setCarrito((carritoActual) => {
