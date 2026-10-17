@@ -1,3 +1,4 @@
+import React from "react";
 import { Texto } from "../atomic/Texto";
 import { EyebrowText } from "../atomic/Etiqueta";
 

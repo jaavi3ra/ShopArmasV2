@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Texto } from "../atomic/Texto";
 import { Input } from "../atomic/Input";
 import { Icono } from "../atomic/Icono";

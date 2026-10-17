@@ -1,3 +1,4 @@
+import React from "react";
 import { Icono } from "../atomic/Icono";
 import { Badge } from "../atomic/Contador";
 import { NavLink } from "../atomic/Link";

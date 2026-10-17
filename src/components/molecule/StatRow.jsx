@@ -1,3 +1,4 @@
+import React from "react";
 import '../../styles/molecule/StatRow.css';
 
 export function StatRow({ label, value }) {
