@@ -4,11 +4,18 @@ import { Imagen } from "../atomic/Imagen";
 import { Boton } from "../atomic/Boton";
 import { Divider } from "../atomic/Divider";
 import { EyebrowText } from "../atomic/Etiqueta";
-import { NavLink } from "../atomic/Link";
 
 import "../../styles/pages/cartPage.css";
 
-export function CartTemplate({ productos, total, formatoPrecio }) {
+export function CartTemplate({
+  productos,
+  total,
+  formatoPrecio,
+  onContinuarComprando,
+  onFinalizarCompra,
+  onSumarCantidad,
+  onRestarCantidad,
+}) {
     const navigate = useNavigate();
     const cantidadTotal = productos.reduce(
     (suma, producto) => suma + producto.quantity,
@@ -58,19 +65,22 @@ export function CartTemplate({ productos, total, formatoPrecio }) {
                   </span>
 
                   <div className="controles-cantidad">
-                    <button type="button">-</button>
+                    <button type="button" onClick={() => onRestarCantidad(producto.id)}>
+                        -
+                    </button>
                     <span>{producto.quantity}</span>
-                    <button type="button">+</button>
-                  </div>
+                    <button type="button" onClick={() => onSumarCantidad(producto.id)}>
+                        +
+                    </button>
+                    </div>
                 </article>
               ))
             )}
           </div>
 
-          <NavLink
-            to="/home"
-            text="← SEGUIR COMPRANDO"
-          />
+          <Boton className="boton-seguir-comprando" onClick={onContinuarComprando}>
+            ← SEGUIR COMPRANDO
+          </Boton>
         </section>
 
         <aside id="resumen-carrito">
@@ -93,9 +103,9 @@ export function CartTemplate({ productos, total, formatoPrecio }) {
             <span>{formatoPrecio(total)}</span>
           </div>
 
-          <Boton className="boton-finalizar" onClick={() => navigate("/checkout")}>
+          <Boton className="boton-finalizar" onClick={onFinalizarCompra}>
             FINALIZAR COMPRA
-          </Boton>
+            </Boton>
 
           <p className="cart-summary-note">
             El envío se confirmará durante el proceso de compra.

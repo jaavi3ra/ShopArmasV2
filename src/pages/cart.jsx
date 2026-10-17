@@ -1,25 +1,15 @@
 
 import { CartTemplate } from "../components/template/CartTemplate";
+import { useNavigate } from "react-router-dom";
 
-export function Cart() {
-  const productos = [
-    {
-      id: 1,
-      name: "Desert Eagle",
-      category: "Pistola",
-      price: 12500,
-      quantity: 1,
-      image: "/-img/static_wikia_nocookie_net-latest.webp",
-    },
-    {
-      id: 2,
-      name: "Micro SMG",
-      category: "Subfusil",
-      price: 8900,
-      quantity: 2,
-      image: "/-img/MicroSMG-GTAVC.webp",
-    },
-  ];
+export function Cart({ carrito, setCarrito }) {
+  const navigate = useNavigate();
+
+  const productos = carrito.map((producto) => ({
+    ...producto,
+    price: producto.price,
+    quantity: producto.quantity,
+  }));
 
   const total = productos.reduce(
     (suma, producto) =>
@@ -36,6 +26,28 @@ export function Cart() {
       productos={productos}
       total={total}
       formatoPrecio={formatoPrecio}
+      onContinuarComprando={() => navigate("/home")}
+      onFinalizarCompra={() => navigate("/checkout")}
+      onSumarCantidad={(id) =>
+        setCarrito((carritoActual) =>
+          carritoActual.map((producto) =>
+            producto.id === id
+              ? { ...producto, quantity: producto.quantity + 1 }
+              : producto
+          )
+        )
+      }
+      onRestarCantidad={(id) =>
+        setCarrito((carritoActual) =>
+          carritoActual
+            .map((producto) =>
+              producto.id === id
+                ? { ...producto, quantity: producto.quantity - 1 }
+                : producto
+            )
+            .filter((producto) => producto.quantity > 0)
+        )
+      }
     />
   );
 }

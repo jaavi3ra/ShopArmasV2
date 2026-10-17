@@ -4,7 +4,7 @@ import { Divider } from "../atomic/Divider";
 import { StashInfo } from "../molecule/Stash";
 import { NavMenu } from "../molecule/NavMenu";
 
-export function Header() {
+export function Header({ cantidadCarrito }) {
   return (
     <header>
        <section className="header-logo">
@@ -16,7 +16,7 @@ export function Header() {
       <section className="header-actions">
         <BalanceInfo balance="100.000" />
         <Divider orientation="vertical"/>
-        <StashInfo quantity={0} />
+        <StashInfo quantity={cantidadCarrito} />
       </section>
     </header>
   );

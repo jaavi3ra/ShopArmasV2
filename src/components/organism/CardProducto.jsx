@@ -79,9 +79,8 @@ export function ProductCard({ product , onAgregarProducto}) {
           </div>
 
           <button
-            className="btn-agregar-item" onClick={() => {
-                console.log("CLICK:", product.name);
-              onAgregarProducto(product.name)}}
+            className="btn-agregar-item"
+            onClick={() => onAgregarProducto(product)}
             data-id={product.id}
           >
             AGREGAR

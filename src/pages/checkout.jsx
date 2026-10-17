@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { CheckoutTemplate } from "../components/template/CheckoutTemplate";
 
-export function Checkout() {
+export function Checkout({ carrito }) {
   const [datos, setDatos] = useState({
     nombre: "",
     correo: "",
@@ -13,10 +13,12 @@ export function Checkout() {
     pago: "tarjeta",
   });
 
-  const productos = [
-    { id: 1, nombre: "Desert Eagle", precio: 12500, cantidad: 1 },
-    { id: 2, nombre: "Micro SMG", precio: 8900, cantidad: 2 },
-  ];
+  const productos = carrito.map((producto) => ({
+  id: producto.id,
+  nombre: producto.name,
+  precio: producto.price,
+  cantidad: producto.quantity,
+}));
 
   const total = productos.reduce(
     (suma, producto) =>

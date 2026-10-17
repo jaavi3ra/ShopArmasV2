@@ -6,7 +6,7 @@ export function StashInfo({ quantity }) {
   return (
     <div className="stash-box">
       <Icono name="cart" />
-      <NavLink text="YOUR STASH" to="/stash" />
+      <NavLink text="YOUR STASH" to="/cart" />
       <Badge value={quantity} />
     </div>
   );
