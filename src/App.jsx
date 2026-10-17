@@ -66,7 +66,7 @@ function App() {
           <Route path="/checkout" element={
               <Checkout carrito={carrito} setCarrito={setCarrito}/>
             }/>
-          <Route path="/product/:id" element={<Product />} />
+          <Route path="/product/:id" element={<Product agregarAlCarrito={agregarAlCarrito} />}/>
           <Route path="/admin" element={<Admin />} />
         </Routes>
         <main className="main-content"></main>

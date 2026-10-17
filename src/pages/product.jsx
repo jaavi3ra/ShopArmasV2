@@ -4,7 +4,7 @@ import { productosCatalogo } from '../data/productos';
 import { ProductTemplate } from '../components/template/ProductTemplate';
 import '../styles/pages/product.css';
 
-export function Product() {
+export function Product({ agregarAlCarrito }) {
   const { id } = useParams();
   // Cantidad ed seleccion del producto
   const [cantidad, setCantidad] = useState(1);
@@ -17,7 +17,8 @@ export function Product() {
       <ProductTemplate
         producto={producto}
         cantidad={cantidad}
-        onCantidadChange={setCantidad} />
+        onCantidadChange={setCantidad}
+        onAddToCart={agregarAlCarrito}/>
     </div>
   );
 }
