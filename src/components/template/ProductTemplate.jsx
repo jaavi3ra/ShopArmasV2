@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Boton } from '../atomic/Boton';
@@ -8,7 +9,7 @@ import { StatRow } from '../molecule/StatRow';
 import { CantidadSeleccion } from '../atomic/CantidadSeleccion.jsx';
 import '../../styles/pages/product.css';
 
-export function ProductTemplate({ producto, onAddToStash, cantidad, onCantidadChange }) {
+export function ProductTemplate({ producto, onAddToStash, onAddToCart, cantidad, onCantidadChange }) {
     const navigate = useNavigate();
 
     // Gestión de imagen seleccionada en galería de miniaturas
@@ -47,11 +48,11 @@ export function ProductTemplate({ producto, onAddToStash, cantidad, onCantidadCh
         .filter((item) => item.id !== producto.id)
         .slice(0, 3);
 
-    const handleStash = () => {
-        if (onAddToStash) {
-            onAddToStash(producto);
-        } else {
-            console.log(`Producto ${name} agregado al stash.`);
+    const handleAddToCart = () => {
+        if (onAddToCart) {
+            for (let i = 0; i < cantidad; i++) {
+                onAddToCart(producto);
+            }
         }
     };
 
@@ -133,11 +134,10 @@ export function ProductTemplate({ producto, onAddToStash, cantidad, onCantidadCh
                     <div className="acciones-producto">
                         <Boton
                             className="btn-carrito-custom"
-                            onClick={handleStash}
+                            onClick={handleAddToCart}
                         >
-                            Añadir al Stash
+                            Agregar al carrito
                         </Boton>
-
                         <Boton
                             className="btn-comprar-custom"
                             onClick={() => navigate('/home')}
