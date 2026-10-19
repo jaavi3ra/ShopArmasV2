@@ -5,11 +5,12 @@ import { MensajeSpan } from "../molecule/mensajeSpan";
 
 
 
-export function HomeTemplate({   children, 
+export function HomeTemplate({ children, 
   stock = 0,
   nombreProducto,
   activeFilter,
-  onFilterChange}) {
+  onFilterChange
+}) {
   console.log("TEMPLATE RECIBE:", nombreProducto);
   return (
     <>  
