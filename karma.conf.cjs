@@ -1,3 +1,9 @@
+//arregla error de chrome y usa edge
+if (process.platform === "win32" && !process.env.CHROME_BIN) {
+  process.env.CHROME_BIN =
+    "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe";
+}
+
 module.exports = function (config) {
   config.set({
     frameworks: ['jasmine'],
@@ -47,9 +53,3 @@ module.exports = function (config) {
     ]
   });
 };
-
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 62028b4648701f60e2fa2ab0a3acdd668376d417
