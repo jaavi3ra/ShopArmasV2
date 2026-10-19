@@ -1,3 +1,4 @@
+import React from "react";
 import { Link } from 'react-router-dom';
 import { Imagen } from '../atomic/Imagen';
 import '../../styles/molecule/ProductRelacionado.css';

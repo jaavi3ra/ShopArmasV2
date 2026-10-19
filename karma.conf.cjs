@@ -53,4 +53,7 @@ module.exports = function (config) {
    ]
  });
 };
+<<<<<<< HEAD
 
+=======
+>>>>>>> 62028b4648701f60e2fa2ab0a3acdd668376d417

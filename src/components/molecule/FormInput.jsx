@@ -3,7 +3,7 @@ import { Texto } from "../atomic/Texto";
 import { Input } from "../atomic/Input";
 import "../../styles/molecule/FormInput.css";
 
-export function FormInput({ label, id, type = "text", placeholder, value, onChange,error
+export function FormInput({ label, id, type = "text", placeholder, value, onChange, error
 }) {
   return (
     <div className="input-group">
@@ -18,7 +18,7 @@ export function FormInput({ label, id, type = "text", placeholder, value, onChan
         value={value}
         onChange={onChange}
       />
-        {error && (
+      {error && (
         <span className="input-error">
           {error}
         </span>
