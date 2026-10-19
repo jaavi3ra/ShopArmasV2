@@ -1,3 +1,4 @@
+import React from 'react';
 import '../../styles/organism/header.css';
 import { BalanceInfo } from "../molecule/BalanceInfo";
 import { Divider } from "../atomic/Divider";

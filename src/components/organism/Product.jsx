@@ -30,8 +30,8 @@ export function Product({ productData = {} }) {
                     <CantidadSeleccion />
 
                     <div className="acciones-producto">
-                        <Boton text="Agregar al carrito" />
-                        <Boton text="Comprar ahora" />
+                        <Boton>Agregar al carrito</Boton>
+                        <Boton>Comprar ahora</Boton>
                     </div>
                 </div>
             </section>
