@@ -1,10 +1,16 @@
+import React from "react";
 import { Listafiltro } from "../molecule/Listafiltro";
 import { EyebrowText } from "../atomic/Etiqueta";
 import { MensajeSpan } from "../molecule/mensajeSpan";
 
 
 
-export function HomeTemplate({ children, stock = 0 ,nombreProducto}) {
+export function HomeTemplate({ children, 
+  stock = 0,
+  nombreProducto,
+  activeFilter,
+  onFilterChange
+}) {
   console.log("TEMPLATE RECIBE:", nombreProducto);
   return (
     <>  
@@ -21,7 +27,9 @@ export function HomeTemplate({ children, stock = 0 ,nombreProducto}) {
       
       <aside className="filter-section">
         <EyebrowText>FILTROS</EyebrowText>
-        <Listafiltro />
+        <Listafiltro
+          activeFilter={activeFilter}
+          onFilterChange={onFilterChange} />
       </aside>
 
       <main className="catalog-section">
@@ -38,7 +46,9 @@ export function HomeTemplate({ children, stock = 0 ,nombreProducto}) {
         </div>
 
         <div className="product-grid">
-          {children}
+           {stock === 0 ? (
+          <p role="status">No hay productos disponibles</p>
+            ) : ( children )}
         </div>
 
       </main>

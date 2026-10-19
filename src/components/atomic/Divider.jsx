@@ -1,3 +1,4 @@
+import React from "react";
 import "../../styles/atomic/Divider.css";
 
 export  function Divider({

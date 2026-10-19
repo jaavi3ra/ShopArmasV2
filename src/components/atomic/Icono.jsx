@@ -1,3 +1,4 @@
+import React from "react";
 import "../../styles/atomic/Icono.css";
 
 export  function Icono({ children, size = 20, className = "" }) {

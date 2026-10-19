@@ -1,3 +1,4 @@
+import React from 'react';
 import { FormTitle } from "../molecule/FormTitle";
 import { AuthTabs } from "../molecule/AuthTabs";
 import { FormInput } from "../molecule/FormInput";

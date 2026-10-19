@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -12,6 +13,9 @@ import {
 export function Login() {
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState("login");
+  const [registerEmailError, setRegisterEmailError] = useState("");
+  const [registerPasswordError, setRegisterPasswordError] = useState("");
+  const [confirmPasswordError, setConfirmPasswordError] = useState("");
   
   //login 
   const [email, setEmail] = useState("");

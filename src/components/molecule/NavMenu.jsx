@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { NavLink } from "../atomic/Link";
 
 export function NavMenu() {
