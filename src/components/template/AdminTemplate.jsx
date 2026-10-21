@@ -1,5 +1,11 @@
 
 import React from "react";
+
+import { Boton } from "../atomic/Boton";
+import { Texto } from "../atomic/Texto";
+import { Imagen } from "../atomic/Imagen";
+import { EyebrowText } from "../atomic/Etiqueta";
+
 import "../../styles/pages/adminPage.css";
 
 export function AdminTemplate({
@@ -19,56 +25,74 @@ export function AdminTemplate({
   return (
     <main className="admin-page">
       <div className="admin-layout">
+
+        {/* Menú lateral */}
         <aside className="admin-sidebar">
-          <h2 className="admin-logo">ShopArmas</h2>
-          <p>Panel de administración</p>
+          <Texto variant="h2" className="admin-logo">
+            ShopArmas
+          </Texto>
+
+          <Texto variant="p">
+            Panel de administración
+          </Texto>
 
           <nav className="admin-menu">
-            <button
-              type="button"
+            <Boton
               className={vista === "productos" ? "active" : ""}
               onClick={onMostrarProductos}
             >
               Productos
-            </button>
+            </Boton>
 
-            <button
-              type="button"
+            <Boton
               className={vista === "agregar" ? "active" : ""}
               onClick={onMostrarFormulario}
             >
               Agregar producto
-            </button>
+            </Boton>
 
-            <button
-              type="button"
+            <Boton
               className="admin-logout"
               onClick={onVolverTienda}
             >
               Volver a la tienda
-            </button>
+            </Boton>
           </nav>
         </aside>
 
+        {/* Contenido principal */}
         <section className="admin-content">
-          <div className="admin-header">
-            <div>
-              <h1>Administrador</h1>
-              <p>Gestiona los productos de ShopArmasV2.</p>
-            </div>
 
-            <div className="admin-stock">
-              Productos: {productos.length}
-            </div>
+          
+        {/* Encabezado administrativo */}
+        <div className="admin-header">
+          <div className="admin-heading">
+            <EyebrowText>PANEL DE CONTROL</EyebrowText>
+
+            <Texto variant="h1">
+              Gestión de productos
+            </Texto>
+
+            <Texto variant="p" className="admin-description">
+              Administra el catálogo, los precios y las características
+              de los productos.
+            </Texto>
           </div>
 
+          <div className="admin-stock">
+            Productos: {productos.length}
+          </div>
+        </div>
+
+
+          {/* Formulario para crear o editar */}
           {vista === "agregar" && (
             <section className="admin-panel">
-              <h2>
+              <Texto variant="h2">
                 {productoEditando
                   ? "Editar producto"
                   : "Agregar producto"}
-              </h2>
+              </Texto>
 
               <form
                 className="admin-form"
@@ -76,6 +100,7 @@ export function AdminTemplate({
               >
                 <div className="admin-field">
                   <label htmlFor="adminNombre">Nombre</label>
+
                   <input
                     id="adminNombre"
                     name="name"
@@ -86,7 +111,10 @@ export function AdminTemplate({
                 </div>
 
                 <div className="admin-field">
-                  <label htmlFor="adminCategoria">Categoría</label>
+                  <label htmlFor="adminCategoria">
+                    Categoría
+                  </label>
+
                   <select
                     id="adminCategoria"
                     name="category"
@@ -106,6 +134,7 @@ export function AdminTemplate({
 
                 <div className="admin-field">
                   <label htmlFor="adminPrecio">Precio</label>
+
                   <input
                     id="adminPrecio"
                     type="number"
@@ -119,6 +148,7 @@ export function AdminTemplate({
 
                 <div className="admin-field">
                   <label htmlFor="adminRp">Puntos RP</label>
+
                   <input
                     id="adminRp"
                     type="number"
@@ -130,7 +160,10 @@ export function AdminTemplate({
                 </div>
 
                 <div className="admin-field full-width">
-                  <label htmlFor="adminImagen">URL de imagen</label>
+                  <label htmlFor="adminImagen">
+                    URL de imagen
+                  </label>
+
                   <input
                     id="adminImagen"
                     type="url"
@@ -143,6 +176,7 @@ export function AdminTemplate({
 
                 <div className="admin-field">
                   <label htmlFor="adminDano">Daño (0-100)</label>
+
                   <input
                     id="adminDano"
                     type="number"
@@ -159,6 +193,7 @@ export function AdminTemplate({
                   <label htmlFor="adminPrecision">
                     Precisión (0-100)
                   </label>
+
                   <input
                     id="adminPrecision"
                     type="number"
@@ -175,6 +210,7 @@ export function AdminTemplate({
                   <label htmlFor="adminAlcance">
                     Alcance (0-100)
                   </label>
+
                   <input
                     id="adminAlcance"
                     type="number"
@@ -188,7 +224,10 @@ export function AdminTemplate({
                 </div>
 
                 <div className="admin-form-actions">
-                  <button type="submit" className="admin-btn">
+                  <button
+                    type="submit"
+                    className="admin-btn"
+                  >
                     {productoEditando
                       ? "Guardar cambios"
                       : "Crear producto"}
@@ -206,24 +245,26 @@ export function AdminTemplate({
             </section>
           )}
 
+          {/* Listado de productos */}
           {vista === "productos" && (
             <section className="admin-panel">
               <div className="admin-header">
-                <h2>Productos disponibles</h2>
+                <Texto variant="h2">
+                  Productos disponibles
+                </Texto>
 
-                <button
-                  type="button"
+                <Boton
                   className="admin-btn"
                   onClick={onMostrarFormulario}
                 >
                   + Nuevo producto
-                </button>
+                </Boton>
               </div>
 
               {productos.length === 0 ? (
-                <p className="admin-empty">
+                <Texto variant="p" className="admin-empty">
                   No hay productos registrados.
-                </p>
+                </Texto>
               ) : (
                 <div className="admin-product-grid">
                   {productos.map((producto) => (
@@ -232,13 +273,9 @@ export function AdminTemplate({
                       key={producto.id}
                     >
                       <div className="admin-product-image">
-                        <img
+                        <Imagen
                           src={producto.image}
                           alt={producto.name}
-                          onError={(evento) => {
-                            evento.currentTarget.style.visibility =
-                              "hidden";
-                          }}
                         />
                       </div>
 
@@ -246,42 +283,50 @@ export function AdminTemplate({
                         {producto.category}
                       </span>
 
-                      <h3>{producto.name}</h3>
+                      <Texto variant="h3">
+                        {producto.name}
+                      </Texto>
 
-                      <p className="admin-product-price">
+                      <Texto
+                        variant="p"
+                        className="admin-product-price"
+                      >
                         $
                         {Number(producto.price).toLocaleString("es-CL")}
-                      </p>
+                      </Texto>
 
                       <div className="admin-product-stats">
                         <span>
                           Daño: {producto.stats.damage}
                         </span>
+
                         <span>
                           Precisión: {producto.stats.accuracy}
                         </span>
+
                         <span>
                           Alcance: {producto.stats.range}
                         </span>
-                        <span>RP: {producto.rp ?? 0}</span>
+
+                        <span>
+                          RP: {producto.rp ?? 0}
+                        </span>
                       </div>
 
                       <div className="admin-product-actions">
-                        <button
-                          type="button"
+                        <Boton
                           className="admin-btn"
                           onClick={() => onEditarProducto(producto)}
                         >
                           Editar
-                        </button>
+                        </Boton>
 
-                        <button
-                          type="button"
+                        <Boton
                           className="admin-btn danger"
                           onClick={() => onEliminarProducto(producto.id)}
                         >
                           Eliminar
-                        </button>
+                        </Boton>
                       </div>
                     </article>
                   ))}

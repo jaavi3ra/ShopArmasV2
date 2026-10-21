@@ -121,6 +121,40 @@
   color: var(--muted, #9d9aa7);
 }
 
+
+.admin-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  min-width: 0;
+}
+
+.admin-heading .eyebrow {
+  margin: 0;
+  line-height: 1.2;
+}
+
+.admin-header h1 {
+  margin: 0;
+  font-size: clamp(28px, 2.5vw, 34px);
+  line-height: 1.2;
+  letter-spacing: -0.8px;
+}
+
+.admin-header .admin-description {
+  margin: 0;
+  max-width: 620px;
+  color: var(--muted, #9d9aa7);
+  line-height: 1.6;
+}
+
+.admin-stock {
+  flex-shrink: 0;
+  align-self: center;
+}
+
+
 .admin-stock {
   padding: 12px 18px;
   color: var(--orange, #ff7a18);
